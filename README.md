@@ -1,1 +1,2 @@
-# board-zerynth-pycom_wipy_v3
+# pycom_wipy_v3
+
