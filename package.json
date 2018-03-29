@@ -1,9 +1,9 @@
 {
     "dependencies": {
-        "lib.espressif.esp32net": "r2.0.11",
-        "sys.zerynth.esptool": "r2.0.11",
-        "sys.zerynth.xtensalx6": "r2.0.11",
-        "vhal.zerynth.xtensalx6_esp32": "r2.0.11"
+        "lib.espressif.esp32net": "r2.1.0",
+        "sys.zerynth.esptool": "r2.1.0",
+        "sys.zerynth.xtensalx6": "r2.1.0",
+        "vhal.zerynth.xtensalx6_esp32": "r2.1.0"
     },
     "description": "Add support for Pycom WiPy 3.0",
     "fullname": "board.zerynth.pycom_wipy_v3",
@@ -23,6 +23,6 @@
     ],
     "repo": "official",
     "title": "Pycom WiPy 3.0 Support Package",
-    "version": "r2.0.11",
+    "version": "r2.1.0",
     "whatsnew": "first Release"
 }
