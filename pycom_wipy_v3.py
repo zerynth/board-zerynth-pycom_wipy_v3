@@ -55,3 +55,9 @@ class PycomWiPy3(Board):
         if res:
             return False,out
         return True,out
+
+    def erase(self,outfn=None):
+        res,out,err = proc.runcmd("python",tools["esptool32"],"--chip", "esp32","--port",self.port,"--baud","115200","erase_flash",outfn=outfn)
+        if res:
+            return False,out
+        return True,out

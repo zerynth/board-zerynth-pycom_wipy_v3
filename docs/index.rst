@@ -15,7 +15,7 @@ WiPy v3.0 is a low-power consumption development hardware designed for Internet 
 Pin Mapping
 ***********
 
-.. figure:: /custom/img/Pycom_WiPy_3.0_pin_io.png
+.. figure:: /custom/img/Pycom_WiPy_3.0_pin_io.jpg
 
 
    :align: center

@@ -24,6 +24,7 @@
     "has_alter_ego":false,
     "uplink_reset": true,
     "reset_after_register":true,
+    "flash_erasable": true,
     "reset_time": 2000,
     "rodata_in_ram":true,
     "connection":{

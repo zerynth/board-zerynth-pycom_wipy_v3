@@ -5,11 +5,11 @@
 ////CDEFINES: ESP32_VHAL ESP32_ETH_PHY_LAN8720
 
 const PinInfo const _vhalpinmap[] STORED = {
-    /* D0   */ MAKE_PIN(PA, 0,  HAS_EXT),                     //RGB_LED NEOPIXEL
+    /* D0   */ MAKE_PIN(PA, 0,  HAS_EXT | HAS_ADC),                     //RGB_LED NEOPIXEL
     /* D1   */ MAKE_PIN(PA, 1,  HAS_EXT | HAS_SER),           //TX0
-    /* D2   */ MAKE_PIN(PA, 2,  HAS_EXT | HAS_I2C),           //SDA1
+    /* D2   */ MAKE_PIN(PA, 2,  HAS_EXT | HAS_I2C | HAS_ADC),           //SDA1
     /* D3   */ MAKE_PIN(PA, 3,  HAS_EXT | HAS_SER),           //RX0
-    /* D4   */ MAKE_PIN(PA, 4,  HAS_EXT | HAS_SER),           //TX1
+    /* D4   */ MAKE_PIN(PA, 4,  HAS_EXT | HAS_SER | HAS_ADC),           //TX1
     /* D5   */ MAKE_PIN(PA, 5,  HAS_EXT | HAS_I2C | HAS_SPI), //SDA2 - VSPI_SCK
     /* D6   */ MAKE_PIN(PA, 6,  HAS_EXT),                     //NOT USED
     /* D7   */ MAKE_PIN(PA, 7,  HAS_EXT),                     //NOT USED
@@ -17,10 +17,10 @@ const PinInfo const _vhalpinmap[] STORED = {
     /* D9   */ MAKE_PIN(PA, 9,  HAS_EXT),                     //NOT USED
     /* D10  */ MAKE_PIN(PA, 10, HAS_EXT),                     //NOT USED
     /* D11  */ MAKE_PIN(PA, 11, HAS_EXT),                     //NOT USED
-    /* D12  */ MAKE_PIN(PA, 12, HAS_EXT | HAS_SPI),           //HSPI_MISO
-    /* D13  */ MAKE_PIN(PA, 13, HAS_EXT | HAS_SPI),           //HSPI_MOSI
-    /* D14  */ MAKE_PIN(PA, 14, HAS_EXT | HAS_SPI),           //HSPI_CLK
-    /* D15  */ MAKE_PIN(PA, 15, HAS_EXT | HAS_SER),           //RX1
+    /* D12  */ MAKE_PIN(PA, 12, HAS_EXT | HAS_SPI | HAS_ADC),           //HSPI_MISO
+    /* D13  */ MAKE_PIN(PA, 13, HAS_EXT | HAS_SPI | HAS_ADC),           //HSPI_MOSI
+    /* D14  */ MAKE_PIN(PA, 14, HAS_EXT | HAS_SPI | HAS_ADC),           //HSPI_CLK
+    /* D15  */ MAKE_PIN(PA, 15, HAS_EXT | HAS_SER | HAS_ADC),           //RX1
     /* D16  */ MAKE_PIN(PA, 16, HAS_EXT),                     //NOT EXPOSED
     /* D17  */ MAKE_PIN(PA, 17, HAS_EXT),                     //NOT EXPOSED
     /* D18  */ MAKE_PIN(PA, 18, HAS_EXT),                     //NOT EXPOSED
@@ -30,9 +30,9 @@ const PinInfo const _vhalpinmap[] STORED = {
     /* D22  */ MAKE_PIN(PA, 22, HAS_EXT),                     //GPIO
     /* D23  */ MAKE_PIN(PA, 23, HAS_EXT),                     //NOT EXPOSED 
     /* D24  */ MAKE_PIN(PA, 24, HAS_EXT),                     //NOT EXPOSED
-    /* D25  */ MAKE_PIN(PA, 25, HAS_EXT | HAS_DAC | HAS_I2C), //DAC0 - SDA0
-    /* D26  */ MAKE_PIN(PA, 26, HAS_EXT | HAS_DAC | HAS_I2C), //DAC1 - SCL0
-    /* D27  */ MAKE_PIN(PA, 27, HAS_EXT | HAS_I2C | HAS_SPI), //SCL2 - VSPI MOSI
+    /* D25  */ MAKE_PIN(PA, 25, HAS_EXT | HAS_DAC | HAS_I2C | HAS_ADC), //DAC0 - SDA0
+    /* D26  */ MAKE_PIN(PA, 26, HAS_EXT | HAS_DAC | HAS_I2C | HAS_ADC), //DAC1 - SCL0
+    /* D27  */ MAKE_PIN(PA, 27, HAS_EXT | HAS_I2C | HAS_SPI | HAS_ADC), //SCL2 - VSPI MOSI
     /* D28  */ MAKE_PIN(PA, 28, HAS_EXT),                     //NOT EXPOSED
     /* D29  */ MAKE_PIN(PA, 29, HAS_EXT),                     //NOT EXPOSED
     /* D30  */ MAKE_PIN(PA, 30, HAS_EXT),                     //NOT EXPOSED
@@ -57,6 +57,16 @@ const PinClass const _analogclass[] STORED = {
     /* A5 */ MAKE_PIN_CLASS(37, 1 , 0, 0), 
     /* A6 */ MAKE_PIN_CLASS(38, 2 , 0, 0), 
     /* A7 */ MAKE_PIN_CLASS(39, 3 , 0, 0), 
+    /* D25*/ MAKE_PIN_CLASS(25, 8 , 1, 0), 
+    /* D26*/ MAKE_PIN_CLASS(26, 9 , 1, 0), 
+    /* D27*/ MAKE_PIN_CLASS(27, 7 , 1, 0), 
+    /* D14*/ MAKE_PIN_CLASS(14, 6 , 1, 0), 
+    /* D12*/ MAKE_PIN_CLASS(12, 5 , 1, 0), 
+    /* D13*/ MAKE_PIN_CLASS(13, 4 , 1, 0), 
+    /* D4 */ MAKE_PIN_CLASS(4, 0 , 1, 0), 
+    /* D0 */ MAKE_PIN_CLASS(0, 1 , 1, 0), 
+    /* D2 */ MAKE_PIN_CLASS(2, 2 , 1, 0), 
+    /* D15*/ MAKE_PIN_CLASS(15, 3 , 1, 0),
 };
 
 const PinClass const _spiclass[] STORED = {
