@@ -1,0 +1,16 @@
+---
+description: Add support for Pycom WiPy 3.0
+fullname: board.zerynth.pycom_wipy_v3
+info:
+    board: Pycom WiPy 3.0
+    chip_manufacturer: Espressif
+    device: esp32
+    family_type: Xtensa lx6
+keywords:
+- espressif
+- esp32
+- board
+- Pycom
+- WiPy
+title: Pycom WiPy 3.0 Support Package
+...
